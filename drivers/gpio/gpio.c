@@ -1,4 +1,5 @@
 #include "gpio.h"
+#include "pins.h"
 
 void gpio_pin_output(volatile uint8_t *ddr, uint8_t pin)
 {
