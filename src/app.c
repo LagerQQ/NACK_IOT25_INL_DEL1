@@ -148,9 +148,13 @@ void app_init(void)
 {
     gpio_pin_output(&LED_DDR, LED_PIN);
     gpio_pin_low(&LED_PORT, LED_PIN);
+
     gpio_pin_output(&RED_LED_DDR, RED_LED_PIN);
     gpio_pin_output(&GREEN_LED_DDR, GREEN_LED_PIN);
+
     gpio_pin_input_pullup(&BUTTON_DDR, &BUTTON_PORT, BUTTON_PIN);
+
+    keypad_init();
 
     millis_init();
 
